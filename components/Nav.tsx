@@ -49,23 +49,21 @@ export default function Nav() {
   };
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex flex-col lg:gap-4">
-      <div className="flex flex-col gap-4 lg:pr-24 mt-6 lg:mt-0">
+    <header className="lg:sticky lg:top-0 lg:flex h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-12 flex flex-col lg:gap-4">
+      <div className="flex flex-col gap-2 lg:pr-24 mt-6 lg:mt-0">
         <div className="w-full flex lg:items-center lg:justify-start">
           <Avatar className="w-24 lg:w-36 h-auto border-2 border-primary bg-secondary">
             <Image src={ProfileImage} alt="" />
-            <AvatarFallback className="w-24 h-24 lg:w-36 lg:h-36 rounded-full border-1 border-primary">
-              IH
-            </AvatarFallback>
+  
           </Avatar>
         </div>
-        <h1 className="text-[42px] font-bold lg:text-start">
+        <h1 className="text-[32px] font-bold lg:text-start">
           Hi, I&#39;m Istiak 👋
         </h1>
         <h2 className="text-xl lg:text-start">
           Full Stack Developer
         </h2>
-        <div className="text-lg lg:text-start text-muted-foreground space-y-2">
+        <div className="text-md lg:text-start text-muted-foreground space-y-2">
           <p>
             Expert in building full-stack web apps using Next.js, React, TypeScript, Node.js, NestJS, Prisma, and Mongoose.
           </p>
@@ -79,7 +77,7 @@ export default function Nav() {
       </div>
 
       <nav className="lg:flex hidden">
-        <ul className="flex flex-col w-max text-start gap-6 uppercase text-xs font-medium">
+        <ul className="flex flex-col w-max text-start gap-3 uppercase text-xs font-medium">
           {navItems.map((item: NavItem) => {
             const { linkClass, indicatorClass, textClass } = getNavItemClasses(item.href);
             return (
